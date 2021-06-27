@@ -30,7 +30,7 @@
 
 .rbc-month-view {
   position: relative;
-  border: 1px solid $calendar-border;
+  //border: 1px solid #6B6BDB;
   display: flex;
   flex-direction: column;
   flex: 1 0 0;
@@ -57,7 +57,13 @@
   height: 100%; // ie-fix
 
   & + & {
-    border-top: 1px solid $cell-border;
+    border-top: 1px solid #ECECFE;
+  }
+  &:nth-child(2){
+    border-top: 1px solid   #6C6CDB;
+  }
+  &:last-child{
+    border-bottom: 1px solid #ECECFE;
   }
 }
 
@@ -77,6 +83,11 @@
       text-decoration: none;
     }
   }
+  .date-header{
+    color: #4040d1;
+    font-weight: 500;
+    font-size: smaller;
+  }
 }
 
 .rbc-row-bg {
@@ -90,13 +101,15 @@
 .rbc-day-bg {
   flex: 1 0 0%;
 
-  & + & {
-    border-left: 1px solid $cell-border;
+  & + & , &:first-child{
+    border-left: 1px solid #ECECFE;
   }
-
+  &:last-child{
+    border-right: 1px solid #ECECFE;
+  }
   .rbc-rtl & + & {
     border-left-width: 0;
-    border-right: 1px solid $cell-border;
+    border-right: 1px solid #ECECFE;
   }
 }
 

@@ -1605,11 +1605,11 @@
     DATE: 'DATE'
   };
   var views = {
-    MONTH: 'month',
     WEEK: 'week',
-    WORK_WEEK: 'work_week',
-    DAY: 'day',
-    AGENDA: 'agenda'
+    MONTH: 'month' //WORK_WEEK: 'work_week',
+    //DAY: 'day',
+    //AGENDA: 'agenda',
+
   };
 
   var viewNames = Object.keys(views).map(function (k) {
@@ -10132,7 +10132,9 @@
     if (!drilldownView) {
       return (
         /*#__PURE__*/
-        React__default.createElement("span", null, label)
+        React__default.createElement("span", {
+          className: "date-header"
+        }, label)
       );
     }
 
@@ -14976,7 +14978,7 @@
         }, messages.today),
         /*#__PURE__*/
         React__default.createElement("button", {
-          className: "rounded",
+          className: "rounded nav-prev",
           type: "button",
           onClick: this.navigate.bind(null, navigate.PREVIOUS)
         },
@@ -14986,7 +14988,7 @@
         })),
         /*#__PURE__*/
         React__default.createElement("button", {
-          className: "rounded",
+          className: "rounded  nav-next",
           type: "button",
           onClick: this.navigate.bind(null, navigate.NEXT)
         },
@@ -15005,10 +15007,6 @@
           id: "timeframe-selector"
         }, this.viewNamesGroup(messages)),
         /*#__PURE__*/
-        React__default.createElement("span", {
-          className: "rbc-toolbar rbc-btn-group"
-        },
-        /*#__PURE__*/
         React__default.createElement("select", {
           className: "outlined-clickable secondary",
           style: {
@@ -15023,7 +15021,7 @@
         /*#__PURE__*/
         React__default.createElement("option", null, "Atlanta"),
         /*#__PURE__*/
-        React__default.createElement("option", null, "Orlando")))))
+        React__default.createElement("option", null, "Orlando"))))
       );
     };
 

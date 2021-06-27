@@ -8,18 +8,19 @@ $active-border: darken($btn-border, 12%);
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
   font-size: 16px;
-
+  margin-bottom: 35px;
   .rbc-toolbar-label {
     flex-grow:1;
-    padding: 0 10px;
-    padding-left: 40px;
+    padding:0 0 0  35px ;
     text-align: left;
-    font-size: 36px;
+    font-size: 34px;
     color: #4040d1;
-    line-height: 51px;
+    line-height: 1;
     vertical-align: middle;
+    font-weight: 700;
+    position: relative;
+    top:-1px;
   }
 
   & button {
@@ -39,28 +40,28 @@ $active-border: darken($btn-border, 12%);
     &:active,
     &.rbc-active {
       background-image: none;
-      box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
-      background-color: $active-background;
-      border-color: $active-border;
+      //box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+      //background-color: $active-background;
+      //border-color: $active-border;
 
       &:hover,
       &:focus {
         color: $btn-color;
-        background-color: darken($btn-bg, 17%);
-        border-color: darken($btn-border, 25%);
+        //background-color: darken($btn-bg, 17%);
+        //border-color: darken($btn-border, 25%);
       }
     }
 
     &:focus {
       color: $btn-color;
-      background-color: $active-background;
-      border-color: $active-border;
+      //background-color: $active-background;
+      //border-color: $active-border;
     }
 
     &:hover {
       color: $btn-color;
-      background-color: $active-background;
-          border-color: $active-border;
+      //background-color: $active-background;
+      //border-color: $active-border;
     }
   }
 }
@@ -68,10 +69,7 @@ $active-border: darken($btn-border, 12%);
 .rbc-btn-group {
   display: flex;
   justify-content: space-around;
-  white-space: nowrap;
-  width: 230px;
-  padding-bottom: 8px;
-
+  align-items: center;
   > button:first-child:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
